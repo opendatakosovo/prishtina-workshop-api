@@ -79,13 +79,13 @@ def prokurimi():
 		}},
 		{"$project":{
 			"_id":0,
-			"tipi":"$_id.tipi",
+			"tipi":"$_id.tipiProkurimit",
 			"vlera":"$vleraKontrates"
 		}
 
 		}
 	])
-	return Response(response=json_util.dumps(json_obj), mimetype="application/json")
+	return Response(response=json_util.dumps(json_obj['result']), mimetype="application/json")
 
 
 if __name__ == '__main__':
